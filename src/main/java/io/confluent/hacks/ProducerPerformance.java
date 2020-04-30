@@ -1,4 +1,4 @@
-/*
+package io.confluent.hacks;/*
  * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright ownership.
@@ -89,7 +89,6 @@ public class ProducerPerformance {
             }
 
             Properties props = new Properties();
-            props.put("bootstrap.servers", "pulsar://localhost:6650");
             if (producerConfig != null) {
                 props.putAll(Utils.loadProps(producerConfig));
             }

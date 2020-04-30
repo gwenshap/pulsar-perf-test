@@ -1,3 +1,5 @@
+package io.confluent.hacks;
+
 import org.apache.kafka.common.Metric;
 import org.apache.kafka.common.MetricName;
 

@@ -1,11 +1,9 @@
 # pulsar-perf-test
 
+Build with:
+`mvn clean install`
+
 Run it with the following arguments:
 ```
---topic perf-test --record-size 512 --throughput 60000 --num-records 54000000 --producer-props acks=all linger.ms=10
+ java -cp ~/workspaces/pulsar-perf-test/target/uber-pulsarperftest-1.0-SNAPSHOT.jar  io.confluent.hacks.ProducerPerformance --topic perf-test --record-size 512 --throughput 60000 --num-records 54000000 --producer-props bootstrap.servers=pulsar://pulsar.platformops.dev.gcp.devel.cpdev.cloud:9092 acks=all linger.ms=10
 ```
-Change this line:
-```
-props.put("bootstrap.servers", "pulsar://localhost:6650");
-```
-if you want to connect to different Pulsar server.
